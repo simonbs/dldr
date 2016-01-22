@@ -63,7 +63,7 @@ def load_json(url):
   return json.loads(urlopen(url).read().decode("utf8"))
 
 def run():
-  args = docopt(__doc__, version="DLDR 1.0")
+  args = docopt(__doc__, version="DLDR 1.0.1")
   s = Schema({
     '--help': bool,
     '--version': bool,
