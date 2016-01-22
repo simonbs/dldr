@@ -58,7 +58,7 @@ def perform_api_request(path):
 def load_json(url):
   return json.loads(urlopen(url).read().decode("utf8"))
 
-if __name__ == "__main__":
+def run():
   args = docopt(__doc__, version="DLDR 1.0")
   s = Schema({
     '--help': bool,
@@ -75,3 +75,6 @@ if __name__ == "__main__":
   stream_url = get_asset_link(card)
   file_name = card['Slug'] if args['--slug-name'] else card['Title']  
   start_download(stream_url, file_name, args['--output'])
+
+if __name__ == "__main__":
+  run()

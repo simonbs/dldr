@@ -10,3 +10,4 @@ __version__ = '1.0.0'
 __author__ = 'Simon Støvring'
 __license__ = 'MIT License'
 
+from .dldr import run
