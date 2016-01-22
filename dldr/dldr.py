@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# encoding: utf-8
 """DLDR.
 Download videos from dr.dk/tv by supplying the URL.
 
@@ -13,9 +14,12 @@ Options:
   --slug-name                            Use slug as file name.  E.g. "huset-pa-christianshavn-1" instead of "Huset På Christianshavn (1)"
   -o DIR, --output=DIR                   Output directory for the downloaded file.
 """
+try:
+  from urllib.request  import urlopen
+except ImportError:
+  from urllib2 import urlopen
 from docopt import docopt
 from schema import Schema, Use, And, Or
-from urllib.request import urlopen
 import os
 import subprocess
 import re
@@ -73,7 +77,7 @@ def run():
   slug = extract_slug_from_url(args['<url>'])
   card = get_program_card(slug)
   stream_url = get_asset_link(card)
-  file_name = card['Slug'] if args['--slug-name'] else card['Title']  
+  file_name = card['Slug'] if args['--slug-name'] else card['Title'].encode('utf8')
   start_download(stream_url, file_name, args['--output'])
 
 if __name__ == "__main__":
