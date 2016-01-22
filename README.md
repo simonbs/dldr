@@ -8,7 +8,8 @@ You can either download the dldr.py file manually or install it using [HomeBrew]
 
 **Install DLDR using [HomeBrew](http://brew.sh).**
 
-    Fill in.
+    $ brew tap simonbs/dldr
+    $ brew install dldr
  
 ### Usage
 
