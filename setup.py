@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# encoding: utf-8
 """Download programs from DR TV.
 
 See:
