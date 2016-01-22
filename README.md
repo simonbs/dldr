@@ -6,10 +6,14 @@ dldr is a tiny command line program for downloading programs from dr.dk/tv. The 
 
 You can either download the dldr.py file manually or install it using [HomeBrew](http://brew.sh). I recommend the latter.
 
-**Install DLDR using [HomeBrew](http://brew.sh).**
+**Install DLDR using [HomeBrew](http://brew.sh)**
 
     $ brew tap simonbs/dldr
     $ brew install dldr
+
+**Or install manually**
+
+Copy the dldr.py file to wherever you want it. Install [ffmpeg](http://ffmpeg.org/download.html), [docopt](http://docopt.org) and [schema](https://github.com/keleshev/schema).
  
 ### Usage
 
